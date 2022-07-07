@@ -1,15 +1,15 @@
 const http = require("http");
 
 function gluon() {
-  //http server created using node module
-  const server = http.createServer((req, res) => {
-    /*
+  /*
     Map that contains list of routes
     Key: pathString
     Value: array of Route objects (contains HTTP method type and handler) that indicate content for given URL
    */
-    const routes = new Map();
+  const routes = new Map();
 
+  //http server created using node module
+  const server = http.createServer((req, res) => {
     //check if request url is valid
     if (req.url === undefined) {
       throw new Error("URL invalid!");
